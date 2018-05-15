@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import alexis.tecsup.edu.pe.laboratoriocalificado3.R;
@@ -23,8 +24,8 @@ public class DenunciaAdapter extends RecyclerView.Adapter<DenunciaAdapter.VievHo
 
     private List<Denuncia> denuncias;
 
-    public List<Denuncia> getDenuncias() {
-        return denuncias;
+    public DenunciaAdapter() {
+        this.denuncias = new ArrayList<>();
     }
 
     public void setDenuncias(List<Denuncia> denuncias) {
@@ -36,6 +37,7 @@ public class DenunciaAdapter extends RecyclerView.Adapter<DenunciaAdapter.VievHo
         public TextView tituloText;
         public TextView propietarioText;
         public ImageView photo;
+        public  TextView ubicacion;
 
 
         public VievHolder(View itemView) {
@@ -43,7 +45,7 @@ public class DenunciaAdapter extends RecyclerView.Adapter<DenunciaAdapter.VievHo
             tituloText=itemView.findViewById(R.id.titulo_text);
             propietarioText=itemView.findViewById(R.id.autor_text);
             photo=itemView.findViewById(R.id.foto_image);
-
+            ubicacion=itemView.findViewById(R.id.ubicacion_text);
 
         }
     }
@@ -63,6 +65,7 @@ public class DenunciaAdapter extends RecyclerView.Adapter<DenunciaAdapter.VievHo
 
         viewHolder.tituloText.setText(denuncia.getTitulo());
         viewHolder.propietarioText.setText("Por : " + denuncia.getUsuario_id());
+        viewHolder.ubicacion.setText(denuncia.getUbicacion());
 
         String url = ApiService.API_BASE_URL + "/images/" + denuncia.getFoto();
         Picasso.with(viewHolder.itemView.getContext()).load(url).into(viewHolder.photo);

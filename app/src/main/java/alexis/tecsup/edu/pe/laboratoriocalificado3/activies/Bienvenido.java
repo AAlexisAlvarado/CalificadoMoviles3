@@ -73,7 +73,7 @@ public class Bienvenido extends AppCompatActivity {
                             Bienvenido.this.startActivity(intent);
                             finish();
                         }else{
-                            Toast.makeText(Bienvenido.this, "Credenciales no validas"+The_password+" "+The_usuario, Toast.LENGTH_LONG).show();
+                            Toast.makeText(Bienvenido.this, "Las credenciales no son las correctas"+The_password+" "+The_usuario, Toast.LENGTH_LONG).show();
 
                         }
 

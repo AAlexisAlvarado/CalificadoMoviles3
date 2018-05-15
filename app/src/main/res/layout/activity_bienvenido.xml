@@ -20,7 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="casual"
-            android:text="Bienvemido a la App de denuncias :v " />
+            android:text="Bienvenido a la aplicacion Denuncias" />
 
         <EditText
             android:id="@+id/ingrese_usuario"

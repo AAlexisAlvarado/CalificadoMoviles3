@@ -1,4 +1,5 @@
 <resources>
-    <string name="app_name">LaboratorioCalificado3</string>
+    <string name="app_name">Denuncias</string>
+    <string name="ubicaion">Ubicacion</string>
     <string name="ubicacion">ubicacion</string>
 </resources>

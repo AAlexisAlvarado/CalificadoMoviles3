@@ -26,7 +26,7 @@ import retrofit2.http.Part;
 public interface ApiService {
 
 
-    String API_BASE_URL = "https://laravel-55-android-gal05.c9users.io/";
+    String API_BASE_URL = "https://moviles-laboratorio-alexisalva.c9users.io/";
 
     @GET("api/denuncia/usuarios")
     Call<List<Usuario>> getUsuarios();
@@ -55,4 +55,14 @@ public interface ApiService {
 
     @GET("api/denuncia/denuncias")
     Call<List<Denuncia>> getDenuncias();
+
+    @Multipart
+    @POST("/api/denuncia/denuncias")
+    Call<ResponseMessage> createDenunciaWithImage(
+            @Part("usuario_id") RequestBody usuario_id,
+            @Part("titulo") RequestBody titulo,
+            @Part("ubicacion") RequestBody ubicacion,
+            @Part("estado") RequestBody estado,
+            @Part MultipartBody.Part foto
+    );
 }
