@@ -14,7 +14,7 @@ public class Denuncia {
     private String foto;
     private String estado;
 
-//falta constructor and tostring
+
     public String getId() {
         return id;
     }

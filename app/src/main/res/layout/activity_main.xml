@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="alexis.tecsup.edu.pe.laboratoriocalificado3.activies.MainActivity">
+    tools:context="alexis.tecsup.edu.pe.laboratoriocalificado3.activities.MainActivity">
 
     <Button
         android:id="@+id/button"

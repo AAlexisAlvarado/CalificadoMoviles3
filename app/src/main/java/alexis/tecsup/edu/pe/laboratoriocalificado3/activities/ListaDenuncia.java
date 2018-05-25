@@ -1,4 +1,4 @@
-package alexis.tecsup.edu.pe.laboratoriocalificado3.activies;
+package alexis.tecsup.edu.pe.laboratoriocalificado3.activities;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -89,7 +89,6 @@ public class ListaDenuncia extends AppCompatActivity {
     }
 
     public void  showRegistrar(View view){
-
         startActivityForResult(new Intent(this, DenunciaRegister.class), REGISTER_FORM_REQUEST);
     }
 

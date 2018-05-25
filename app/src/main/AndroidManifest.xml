@@ -22,15 +22,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activies.MainActivity">
+        <activity android:name=".activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activies.Bienvenido" />
-        <activity android:name=".activies.ListaDenuncia" />
+        <activity android:name=".activities.Bienvenido" />
+        <activity android:name=".activities.ListaDenuncia" />
     </application>
 
 </manifest>

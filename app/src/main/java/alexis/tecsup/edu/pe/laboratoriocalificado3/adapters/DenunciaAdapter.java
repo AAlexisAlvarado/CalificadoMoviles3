@@ -17,6 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import alexis.tecsup.edu.pe.laboratoriocalificado3.R;
+import alexis.tecsup.edu.pe.laboratoriocalificado3.activities.Bienvenido;
 import alexis.tecsup.edu.pe.laboratoriocalificado3.models.Denuncia;
 import alexis.tecsup.edu.pe.laboratoriocalificado3.services.ApiService;
 
@@ -64,7 +65,7 @@ public class DenunciaAdapter extends RecyclerView.Adapter<DenunciaAdapter.VievHo
         Denuncia denuncia= this.denuncias.get(position);
 
         viewHolder.tituloText.setText(denuncia.getTitulo());
-        viewHolder.propietarioText.setText("Por : " + denuncia.getUsuario_id());
+        viewHolder.propietarioText.setText("Por : " + Bienvenido.The_usuario);
         viewHolder.ubicacion.setText(denuncia.getUbicacion());
 
         String url = ApiService.API_BASE_URL + "/images/" + denuncia.getFoto();

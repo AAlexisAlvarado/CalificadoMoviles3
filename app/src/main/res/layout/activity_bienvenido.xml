@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="alexis.tecsup.edu.pe.laboratoriocalificado3.activies.Bienvenido">
+    tools:context="alexis.tecsup.edu.pe.laboratoriocalificado3.activities.Bienvenido">
 
 
     <LinearLayout

@@ -13,8 +13,6 @@ public class Usuario {
     private int tipo;
     private int id;
 
-
-    //falta constructor and tostring
     public String getPassword() {
         return password;
     }

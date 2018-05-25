@@ -1,4 +1,4 @@
-package alexis.tecsup.edu.pe.laboratoriocalificado3.activies;
+package alexis.tecsup.edu.pe.laboratoriocalificado3.activities;
 
 /**
  * Created by alexi on 14/05/2018.

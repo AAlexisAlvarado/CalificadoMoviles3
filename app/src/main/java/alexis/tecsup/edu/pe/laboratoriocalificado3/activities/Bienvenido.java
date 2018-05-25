@@ -1,4 +1,4 @@
-package alexis.tecsup.edu.pe.laboratoriocalificado3.activies;
+package alexis.tecsup.edu.pe.laboratoriocalificado3.activities;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -8,7 +8,6 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.Currency;
 import java.util.List;
 
 import alexis.tecsup.edu.pe.laboratoriocalificado3.R;
@@ -28,6 +27,12 @@ public class Bienvenido extends AppCompatActivity {
 
     private static final int REGISTER_FORM_REQUEST=100;
 
+
+    public static String The_usuario;
+    public static String The_password;
+
+    public  static  int The_codigo;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,8 +46,8 @@ public class Bienvenido extends AppCompatActivity {
 
     public void ingresar(View view){
 
-        final String The_usuario=ingreseUsuario.getText().toString().trim();
-        final String The_password=ingresePassword.getText().toString().trim();
+        The_usuario=ingreseUsuario.getText().toString().trim();
+        The_password=ingresePassword.getText().toString().trim();
 
         ApiService service = ApiServiceGenerator.createService(ApiService.class);
 
@@ -63,17 +68,21 @@ public class Bienvenido extends AppCompatActivity {
 
                         for (Usuario usuario:usuarios){
                             if(usuario.getNombre().equals(The_usuario) && usuario.getPassword().equals(The_password)){
+                                The_codigo= usuario.getId();
                                 verdad=true;
+
                             }
                             Log.d("PRODUCTO : ",usuario.getNombre()+"  "+ usuario.getPassword());
                         }
 
                         if (verdad==true) {
                             Intent intent = new Intent(Bienvenido.this, ListaDenuncia.class);
+
                             Bienvenido.this.startActivity(intent);
                             finish();
+
                         }else{
-                            Toast.makeText(Bienvenido.this, "Las credenciales no son las correctas"+The_password+" "+The_usuario, Toast.LENGTH_LONG).show();
+                            Toast.makeText(Bienvenido.this, "Credenciales no validas"+The_password+" "+The_usuario, Toast.LENGTH_LONG).show();
 
                         }
 
@@ -105,7 +114,7 @@ public class Bienvenido extends AppCompatActivity {
         // Toast.makeText(this, "esto " + usuario+ "  y esto "+password, Toast.LENGTH_SHORT).show();
 
     }
-    public  void registrar(View view){
+    public  void registrarUser(View view){
         startActivityForResult(new Intent(this,RegistroUsuario.class),REGISTER_FORM_REQUEST);
     }
 

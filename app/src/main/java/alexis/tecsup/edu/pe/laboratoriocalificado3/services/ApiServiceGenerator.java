@@ -6,9 +6,8 @@ import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-
 /**
- * Created by alexi on 14/05/2018.
+ * Created by Alumno on 11/05/2018.
  */
 
 public class ApiServiceGenerator {
