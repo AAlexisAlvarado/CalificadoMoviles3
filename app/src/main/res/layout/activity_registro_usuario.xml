@@ -38,7 +38,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="50px"
             android:ems="10"
-            android:hint="dni"
+            android:hint="DNI"
             android:inputType="textPersonName" />
 
         <EditText
@@ -47,7 +47,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:layout_marginTop="50px"
-            android:hint="Password"
+            android:hint="Contraseña"
             android:inputType="textPassword" />
 
         <EditText
@@ -56,7 +56,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="50px"
             android:ems="10"
-            android:hint="Repita el password"
+            android:hint="Repetir la contraseña"
             android:inputType="textPassword" />
 
         <Button

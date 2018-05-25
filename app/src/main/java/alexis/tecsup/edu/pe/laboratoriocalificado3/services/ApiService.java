@@ -5,6 +5,7 @@ package alexis.tecsup.edu.pe.laboratoriocalificado3.services;
  */
 
 import java.util.List;
+import java.util.Map;
 
 import alexis.tecsup.edu.pe.laboratoriocalificado3.models.Denuncia;
 import alexis.tecsup.edu.pe.laboratoriocalificado3.models.Usuario;
@@ -18,6 +19,8 @@ import retrofit2.http.GET;
 import retrofit2.http.Multipart;
 import retrofit2.http.POST;
 import retrofit2.http.Part;
+import retrofit2.http.Path;
+import retrofit2.http.Query;
 
 /**
  * Created by Alumno on 11/05/2018.
@@ -43,6 +46,12 @@ public interface ApiService {
                                         @Field("tipo") int tipo);
 
 
+
+
+
+
+
+
 /*    @Multipart
     @POST("/api/v1/productos")
     Call<ResponseMessage> createProductoWithImage(
@@ -55,6 +64,10 @@ public interface ApiService {
 
     @GET("api/denuncia/denuncias")
     Call<List<Denuncia>> getDenuncias();
+
+    @GET("/api/denuncia/denuncias/{id_usuario}")
+    Call<List<Denuncia>> denuncias_x_usuario(@Path("id_usuario") int id_usuario);
+
 
 
     @FormUrlEncoded
@@ -76,6 +89,14 @@ public interface ApiService {
             @Part("estado") RequestBody estado,
             @Part MultipartBody.Part foto
     );
+
+
+
+    /*@GET("/api/denuncia/denuncias/{otp}")
+    Call<List<Denuncia>> denuncias_por_usuario(@Path("otp") int otp);
+*/
+
+
 
 
 }

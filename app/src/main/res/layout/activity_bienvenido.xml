@@ -20,24 +20,24 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="casual"
-            android:text="Bienvenido a la aplicacion Denuncias" />
+            android:text="Bienvenido " />
 
         <EditText
             android:id="@+id/ingrese_usuario"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
+            android:ems="12"
             android:hint="Usuario"
-            android:layout_marginTop="50px"
+            android:layout_marginTop="60px"
             android:inputType="textPersonName" />
 
         <EditText
             android:id="@+id/ingrese_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:layout_marginTop="50px"
-            android:hint="Password"
+            android:ems="12"
+            android:layout_marginTop="60px"
+            android:hint="Contraseña"
             android:inputType="textPassword" />
 
         <Button
@@ -45,18 +45,18 @@
             android:layout_marginStart="320px"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50px"
-            android:text="Iniciar Sesion"
+            android:layout_marginTop="60px"
+            android:text="Iniciar Sesión"
             android:onClick="ingresar"/>
 
         <Button
             android:id="@+id/Registro"
             android:layout_marginStart="370px"
-            android:layout_marginTop="50px"
+            android:layout_marginTop="60px"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Registro"
-            android:onClick="registrar"/>
+            android:onClick="registrarUser"/>
     </LinearLayout>
 
 </LinearLayout>

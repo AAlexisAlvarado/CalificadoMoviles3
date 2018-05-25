@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Currency;
 import java.util.List;
 
 import alexis.tecsup.edu.pe.laboratoriocalificado3.R;
@@ -32,6 +33,7 @@ public class Bienvenido extends AppCompatActivity {
     public static String The_password;
 
     public  static  int The_codigo;
+    public static  int The_tipo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,6 +71,9 @@ public class Bienvenido extends AppCompatActivity {
                         for (Usuario usuario:usuarios){
                             if(usuario.getNombre().equals(The_usuario) && usuario.getPassword().equals(The_password)){
                                 The_codigo= usuario.getId();
+                                The_tipo=usuario.getTipo();
+                                Log.d("aaaaaa",The_password+The_codigo+The_tipo);
+
                                 verdad=true;
 
                             }
@@ -118,5 +123,5 @@ public class Bienvenido extends AppCompatActivity {
         startActivityForResult(new Intent(this,RegistroUsuario.class),REGISTER_FORM_REQUEST);
     }
 
-
+//se supone que esto debe estar en otro branch
 }
